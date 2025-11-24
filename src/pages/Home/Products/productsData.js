@@ -1,7 +1,7 @@
 import amaite from '../../../assets/Amaite-grano.jpg'
 import imox from '../../../assets/Imox-grano.jpg'
 import yatzil from '../../../assets/Yatzil-grano.jpg'
-import ixchel from '../../../assets/ixchel-grano.jpg'
+import ixchel from '../../../assets/Ixchel-grano.jpg'
 import yaxkin from '../../../assets/yaxkin-grano.jpg'
 
 const productsData = [
