@@ -10,10 +10,11 @@ export default function Footer() {
             sx={{
                 backgroundColor: "#F4D58D",
                 px: { xs: 3, sm: 5, md: 10 },
-                py: { xs: 4, sm: 6 },
+                pt: { xs: 4, sm: 6 },
+                pb: { xs: 2, sm: 3 },
             }}
         >
-            <Grid container spacing={4} justifyContent="center" alignItems="flex-start" textAlign={{ xs: "center", sm: "left" }}>
+            <Grid container spacing={5} justifyContent="center" alignItems="flex-start" textAlign={{ xs: "center", sm: "left" }}>
 
                 {/* Logo e información */}
                 <Grid item xs={12} sm={6} md={4}

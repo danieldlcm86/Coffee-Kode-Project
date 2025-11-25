@@ -13,6 +13,7 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const pages = [
     { name: "Tienda", path: "/tienda" },
@@ -90,24 +91,12 @@ export default function Navbar() {
             onClose={handleMobileMenuClose}
         >
             <MenuItem>
-                <IconButton size="large" aria-label="mostrar 4 nuevos correos" color="inherit">
-                    <Badge badgeContent={4} color="error">
-                        <MailIcon />
+                <IconButton size="large" aria-label="Productos en carrito" color="inherit">
+                    <Badge badgeContent={2} color="error">
+                        <ShoppingCartIcon />
                     </Badge>
                 </IconButton>
-                <p>Mensajes</p>
-            </MenuItem>
-            <MenuItem>
-                <IconButton
-                    size="large"
-                    aria-label="mostrar 17 nuevas notificaciones"
-                    color="inherit"
-                >
-                    <Badge badgeContent={17} color="error">
-                        <NotificationsIcon />
-                    </Badge>
-                </IconButton>
-                <p>Notificaciones</p>
+                <p>Carrito</p>
             </MenuItem>
             <MenuItem onClick={handleProfileMenuOpen}>
                 <IconButton
@@ -185,18 +174,11 @@ export default function Navbar() {
                     </Box>
                     <Box sx={{ flexGrow: 1 }} />
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                        <IconButton size="large" aria-label="mostrar 4 nuevos correos" color="inherit">
-                            <Badge badgeContent={4} color="warning">
-                                <MailIcon sx={{ color: "#344E41" }} />
-                            </Badge>
-                        </IconButton>
-                        <IconButton
-                            size="large"
-                            aria-label="mostrar 17 nuevas notificaciones"
-                            color="inherit"
-                        >
-                            <Badge badgeContent={17} color="warning">
-                                <NotificationsIcon sx={{ color: "#344E41" }} />
+                        <IconButton size="large" 
+                            aria-label="Productos en carrito" 
+                            color="inherit">
+                            <Badge badgeContent={2} color="warning">
+                                <ShoppingCartIcon fontSize='medium' sx={{ color: "#344E41" }} />
                             </Badge>
                         </IconButton>
                         < Link to="/iniciar-sesion">
@@ -209,7 +191,7 @@ export default function Navbar() {
                                 onClick={handleProfileMenuOpen}
                                 color="inherit"
                             >
-                                <AccountCircle sx={{ color: "#344E41" }} />
+                                <AccountCircle fontSize='medium' sx={{ color: "#344E41" }} />
                             </IconButton>
                         </ Link>
                     </Box>

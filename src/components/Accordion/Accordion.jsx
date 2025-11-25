@@ -24,8 +24,9 @@ export default function AccordionReusable({
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls={`${panelKey}-content`}
                 id={`${panelKey}-header`}
+                
             >
-                <Typography component="span" sx={summarySx}>
+                <Typography component="span" sx={{...summarySx, fontFamily:"'Fraunces', sans-serif" }}>
                     {title}
                 </Typography>
             </AccordionSummary>

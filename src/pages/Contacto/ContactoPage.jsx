@@ -1,8 +1,9 @@
+import ContactUs from "../../components/contact-us/ContactUs";
 
 function ContactoPage() {
     return(
         <>
-        <h1>Contacto</h1>
+        < ContactUs />
         </>
     )
 }

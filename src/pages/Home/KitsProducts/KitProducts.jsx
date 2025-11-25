@@ -3,16 +3,12 @@ import CardProduct from "../../../components/Cards/CardProduct";
 
 import kitProductsData from "./kitsProductsData.js";
 
-const styleContainer = {
-    padding: "50px",
-}
-
 function KitsProducts() {
     return (
         <Box
             component="section"
             sx={{
-                px: { xs: 2, sm: 4, md: 8 },      // padding horizontal responsivo
+                px: { xs: 2, sm: 4, md: 4 },      // padding horizontal responsivo
                 py: { xs: 2, sm: 4, md: 6 },      // padding vertical responsivo
             }}
         >
