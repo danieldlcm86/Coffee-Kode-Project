@@ -14,10 +14,16 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 
-const pages = ['Tienda', 'Reseñas', 'Contáctanos'];
+const pages = [
+    { name: "Tienda", path: "/tienda" },
+    { name: "Reseñas", path: "/nosotros" },     // Asumo que así lo quieres
+    { name: "Contáctanos", path: "/contacto" }
+];
+
 
 import './navbar.css';
 import BasicMenu from './MenuBar/BasicMenu';
+import { Link } from 'react-router';
 
 
 export default function Navbar() {
@@ -124,31 +130,37 @@ export default function Navbar() {
                 backgroundColor: '#F4D58D'
             }} >
                 <Toolbar>
-                    <IconButton sx={{ p: 0 }}>
-                        <Avatar alt="Remy Sharp" src="./CoffeKode.png"
-                            sx={{ width: 70, height: 70, marginRight: 0 }}
-                        />
-                    </IconButton>
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="div"
-                        sx={{
-                            display: { xs: 'none', sm: 'block' },
-                            color: "#344E41",
-                            fontFamily: "'Fraunces', serif",
-                            fontWeight: 500,
-                            fontStyle: "normal"
-                        }}
-                    >
-                        CoffeeKode
-                    </Typography>
+                    < Link to="/">
+                        <IconButton sx={{ p: 0 }}>
+                            <Avatar alt="Remy Sharp" src="./CoffeKode.png"
+                                sx={{ width: 70, height: 70, marginRight: 0 }}
+                            />
+                        </IconButton>
+                    </ Link>
+                    < Link to="/">
+                        <Typography
+                            variant="h6"
+                            noWrap
+                            component="div"
+                            sx={{
+                                display: { xs: 'none', sm: 'block' },
+                                color: "#344E41",
+                                fontFamily: "'Fraunces', serif",
+                                fontWeight: 500,
+                                fontStyle: "normal"
+                            }}
+                        >
+                            CoffeeKode
+                        </Typography>
+                    </Link>
                     <Box ml={5} sx={{
                         flexGrow: 1, display: { xs: 'none', md: 'flex' }
                     }}>
                         {pages.map((page) => (
                             <Button
-                                key={page}
+                                key={page.name}
+                                component={Link}
+                                to={page.path}
                                 // onClick={handleCloseNavMenu}
                                 sx={{
                                     my: 2,
@@ -166,7 +178,7 @@ export default function Navbar() {
                                     },
                                 }}
                             >
-                                {page}
+                                {page.name}
                             </Button>
                         ))}
                         < BasicMenu />
@@ -187,17 +199,19 @@ export default function Navbar() {
                                 <NotificationsIcon sx={{ color: "#344E41" }} />
                             </Badge>
                         </IconButton>
-                        <IconButton
-                            size="large"
-                            edge="end"
-                            aria-label="cuenta del usuario actual"
-                            aria-controls={menuId}
-                            aria-haspopup="true"
-                            onClick={handleProfileMenuOpen}
-                            color="inherit"
-                        >
-                            <AccountCircle sx={{ color: "#344E41" }} />
-                        </IconButton>
+                        < Link to="/iniciar-sesion">
+                            <IconButton
+                                size="large"
+                                edge="end"
+                                aria-label="cuenta del usuario actual"
+                                aria-controls={menuId}
+                                aria-haspopup="true"
+                                onClick={handleProfileMenuOpen}
+                                color="inherit"
+                            >
+                                <AccountCircle sx={{ color: "#344E41" }} />
+                            </IconButton>
+                        </ Link>
                     </Box>
                     <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
                         <IconButton

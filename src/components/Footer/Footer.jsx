@@ -10,7 +10,6 @@ export default function Footer() {
             sx={{
                 backgroundColor: "#F4D58D",
                 padding: "50px 20px 20px 20px",
-                marginTop: "40px",
             }}
         >
             <Grid container spacing={4} justifyContent="center" alignItems="flex-start">

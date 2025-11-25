@@ -7,7 +7,7 @@ function SignInPage() {
         <>
             < Navbar />
             <SignIn />
-            < Footer />
+            < Footer/>
         </>
     )
 }

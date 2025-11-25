@@ -76,16 +76,16 @@ export default function SignUp(props) {
 
     if (!email.value || !/\S+@\S+\.\S+/.test(email.value)) {
       setEmailError(true);
-      setEmailErrorMessage('Please enter a valid email address.');
+      setEmailErrorMessage('Ingrese un correo electrónico válido.');
       isValid = false;
     } else {
       setEmailError(false);
       setEmailErrorMessage('');
     }
 
-    if (!password.value || password.value.length < 6) {
+    if (!password.value || password.value.length < 8) {
       setPasswordError(true);
-      setPasswordErrorMessage('Password must be at least 6 characters long.');
+      setPasswordErrorMessage('La contraseña debe tener al menos 8 caracteres.');
       isValid = false;
     } else {
       setPasswordError(false);
@@ -94,7 +94,7 @@ export default function SignUp(props) {
 
     if (!name.value || name.value.length < 1) {
       setNameError(true);
-      setNameErrorMessage('Name is required.');
+      setNameErrorMessage('El nombre es obligatorio.');
       isValid = false;
     } else {
       setNameError(false);
@@ -130,7 +130,7 @@ export default function SignUp(props) {
             variant="h4"
             sx={{ width: '100%', fontSize: 'clamp(2rem, 10vw, 2.15rem)' }}
           >
-            Sign up
+            Registrarse
           </Typography>
           <Box
             component="form"
@@ -138,7 +138,7 @@ export default function SignUp(props) {
             sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}
           >
             <FormControl>
-              <FormLabel htmlFor="name">Full name</FormLabel>
+              <FormLabel htmlFor="name">Nombre completo</FormLabel>
               <TextField
                 autoComplete="name"
                 name="name"
@@ -152,12 +152,12 @@ export default function SignUp(props) {
               />
             </FormControl>
             <FormControl>
-              <FormLabel htmlFor="email">Email</FormLabel>
+              <FormLabel htmlFor="email">Correo electrónico</FormLabel>
               <TextField
                 required
                 fullWidth
                 id="email"
-                placeholder="your@email.com"
+                placeholder="tu@email.com"
                 name="email"
                 autoComplete="email"
                 variant="outlined"
@@ -167,7 +167,7 @@ export default function SignUp(props) {
               />
             </FormControl>
             <FormControl>
-              <FormLabel htmlFor="password">Password</FormLabel>
+              <FormLabel htmlFor="password">Contraseña</FormLabel>
               <TextField
                 required
                 fullWidth
@@ -184,7 +184,7 @@ export default function SignUp(props) {
             </FormControl>
             <FormControlLabel
               control={<Checkbox value="allowExtraEmails" color="primary" />}
-              label="I want to receive updates via email."
+              label="Quiero recibir actualizaciones por correo electrónico."
             />
             <Button
               type="submit"
@@ -202,27 +202,27 @@ export default function SignUp(props) {
             <Button
               fullWidth
               variant="outlined"
-              onClick={() => alert('Sign up with Google')}
+              onClick={() => alert('Registrarse con Google')}
               startIcon={<GoogleIcon />}
             >
-              Sign up with Google
+              Registrarse con Google
             </Button>
             <Button
               fullWidth
               variant="outlined"
-              onClick={() => alert('Sign up with Facebook')}
+              onClick={() => alert('Registrarse con Facebook')}
               startIcon={<FacebookIcon />}
             >
-              Sign up with Facebook
+              Registrarse con Facebook
             </Button>
             <Typography sx={{ textAlign: 'center' }}>
-              Already have an account?{' '}
+              ¿Ya tienes una cuenta?{' '}
               <Link
                 href="/material-ui/getting-started/templates/sign-in/"
                 variant="body2"
                 sx={{ alignSelf: 'center' }}
               >
-                Sign in
+                Iniciar sesión
               </Link>
             </Typography>
           </Box>
