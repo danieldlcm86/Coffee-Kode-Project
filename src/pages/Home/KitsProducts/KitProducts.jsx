@@ -1,4 +1,4 @@
-import {  Grid } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import CardProduct from "../../../components/Cards/CardProduct";
 
 import kitProductsData from "./kitsProductsData.js";
@@ -9,7 +9,13 @@ const styleContainer = {
 
 function KitsProducts() {
     return (
-        <section style={styleContainer}>
+        <Box
+            component="section"
+            sx={{
+                px: { xs: 2, sm: 4, md: 8 },      // padding horizontal responsivo
+                py: { xs: 2, sm: 4, md: 6 },      // padding vertical responsivo
+            }}
+        >
             < Grid container spacing={3} justifyContent="center" mt={0} p={5}
                 sx={{
                     backgroundColor: "#344E41",
@@ -33,7 +39,7 @@ function KitsProducts() {
                     </Grid>
                 ))}
             </ Grid >
-        </section>
+        </Box>
     )
 }
 
