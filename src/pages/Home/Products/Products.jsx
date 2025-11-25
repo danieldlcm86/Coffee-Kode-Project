@@ -24,7 +24,7 @@ function Products() {
                             fontSize: { xs: "2rem", md: "3rem" }, fontWeight: "bold", 
                             textAlign: "center", 
                             m: 5,
-                            fontFamily: 'montserrat',
+                            fontFamily: "'Fraunces', serif",
                             
                         }}
                     >
