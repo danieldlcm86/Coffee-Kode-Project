@@ -16,8 +16,8 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 
 const pages = [
     { name: "Tienda", path: "/tienda" },
-    { name: "Reseñas", path: "/nosotros" },     // Asumo que así lo quieres
-    { name: "Contáctanos", path: "/contacto" }
+    { name: "Reseñas", path: "/resenas" },
+    { name: "Contáctanos", path: "/contacto" },
 ];
 
 

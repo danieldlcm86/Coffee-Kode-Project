@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import { Link } from 'react-router';
 
 export default function BasicMenu() {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -56,9 +57,15 @@ export default function BasicMenu() {
                     },
                 }}
             >
-                <MenuItem onClick={handleClose}>Preguntas frecuentes</MenuItem>
-                <MenuItem onClick={handleClose}>Sobre Nosotros</MenuItem>
-                <MenuItem onClick={handleClose}>Términos y Condiciones</MenuItem>
+                < Link to="/quienes-somos/preguntas-frecuentes" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <MenuItem onClick={handleClose}>Preguntas frecuentes</MenuItem>
+                </Link>
+                < Link to="/quienes-somos/nosotros" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <MenuItem onClick={handleClose}>Sobre Nosotros</MenuItem>
+                </Link>
+                < Link to="/quienes-somos/tyc" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <MenuItem onClick={handleClose}>Términos y Condiciones</MenuItem>
+                </Link>
             </Menu>
         </div>
     );
